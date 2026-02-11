@@ -34,9 +34,15 @@ const displayBook = (myLibrary)=>{
     })
 }
 
+function openModal(){
+    const input = document.getElementById('title')
+    modal.classList.add('active')
+    input.focus()
+}
 
 openBtn.addEventListener("click", () => {
     modal.classList.add("active");
+    openModal()
 });
 
 modal.addEventListener("click", (e) => {

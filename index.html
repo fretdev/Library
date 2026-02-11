@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon/favicon-16x16.png">
+    <link rel="manifest" href="imgs/favicon/site.webmanifest">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,14 +26,14 @@
         <div class="modal">
             <div class="modal-content">
                 <h2>Add new book</h2>
-                <form action="">
+                <form action="" id="form">
                     <div class="form-group">
-                        <input type="text" placeholder="" required>
+                        <input type="text" id="title" placeholder="" required>
                         <label for="title">Title:</label>
                     </div>
                     
                     <div class="form-group">
-                        <input type="text" placeholder="" required>
+                        <input type="text" id="author" placeholder="" required>
                         <label for="author">Author:</label>
                     </div>
 

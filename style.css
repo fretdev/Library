@@ -69,7 +69,26 @@ h1{
 .judge{
     font-size: 1rem;
     color: #ffd369;
+    padding-left: 5px;
 }
+/* Animate the span to bounce */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-span {
+  display: inline-block; /* needed for transform */
+  animation: bounce 1s infinite;
+}
+
 .add-btn{
     display: flex;
     justify-content: center;

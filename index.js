@@ -1,5 +1,10 @@
 let editingBookId = null
 
+const headerText = document.getElementById('header-text')
+const judgeText = document.getElementById('judge-text')
+judgeText.classList.remove('animate-span');
+void judgeText.offsetWidth;
+judgeText.classList.add('animate-span');
 
 const modal = document.querySelector(".modal");
 const openBtn = document.querySelector(".add-btn");
@@ -29,6 +34,8 @@ function addBookToLibrary(title,author,pages,read) {
 
 const displayBook = ()=>{
     library.innerHTML = ''
+     headerText.childNodes[0].textContent = "Hi Hoarder"
+     judgeText.textContent = "Are we going to read this books or just let the dust settle?🕸️"
     myLibrary.forEach(book=>{
         const bookCard = document.createElement('div')
         bookCard.classList.add('book-card')
@@ -40,7 +47,7 @@ const displayBook = ()=>{
             <p><strong>Read:</strong> ${book.read ? 'Yes' : 'No'}</p>
             <div class="crud-btns">
                 <button class="btn read-btn">${!book.read ?'Read Book':'Unread'}</button>
-                <button class="btn edit-btn" type="submit">Edit Book</button>
+                <button class="btn edit-btn">Edit Book</button>
             </div>
             <button class="delete-btn">Delete Book</button>    
         `
@@ -74,6 +81,7 @@ const displayBook = ()=>{
 
 function openModal(){
     editingBookId = null
+    formHeader.innerHTML = "Add new book"
     submitBtn.textContent = "Add Book"
     const input = document.getElementById('title')
     modal.classList.add('active')
@@ -116,5 +124,6 @@ form.addEventListener('submit',(e)=>{
         form.reset()
         modal.classList.remove('active')
         submitBtn.textContent = "Add Book"
+        formHeader.innerHTML = "Add new book"
     
 })

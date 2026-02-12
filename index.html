@@ -25,20 +25,20 @@
         <div class="library" id="library"></div>
         <div class="modal">
             <div class="modal-content">
-                <h2>Add new book</h2>
+                <h2 id="form-header">Add new book</h2>
                 <form action="" id="form">
                     <div class="form-group">
-                        <input type="text" id="title" placeholder="" required>
+                        <input type="text" id="title" placeholder="" maxlength="40" required>
                         <label for="title">Title:</label>
                     </div>
                     
                     <div class="form-group">
-                        <input type="text" id="author" placeholder="" required>
+                        <input type="text" id="author" placeholder="" maxlength="40" required>
                         <label for="author">Author:</label>
                     </div>
 
                    <div class="form-group">
-                        <input type="number" min="1" id="pages" step="1" placeholder="" required>
+                        <input type="number" min="1" id="pages" step="1"  placeholder="" required>
                         <label for="pages">Pages:</label>
                     </div>
 
